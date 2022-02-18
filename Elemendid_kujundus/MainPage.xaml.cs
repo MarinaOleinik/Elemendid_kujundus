@@ -10,25 +10,82 @@ namespace Elemendid_kujundus
 {
     public partial class MainPage : ContentPage
     {
+        Button editor_btn, timer_btn, box_btn, datepicker_btn,ss_btn;
         public MainPage()
         {
-            Button editor_btn = new Button 
+            datepicker_btn = new Button
+            {
+                Text = "Data/Time picker leht",
+                TextColor = Color.Brown,
+                BackgroundColor = Color.BlueViolet
+            };
+            datepicker_btn.Clicked += Start_Pages;
+            ss_btn = new Button
+            {
+                Text = "Stepper/Slider leht",
+                TextColor = Color.Brown,
+                BackgroundColor = Color.BlueViolet
+            };
+            ss_btn.Clicked += Start_Pages;
+            editor_btn = new Button 
             { 
                 Text="Editor leht",
                 TextColor=Color.Brown,
                 BackgroundColor=Color.Aqua   
             };
-            editor_btn.Clicked += Editor_btn_Clicked;
-            StackLayout st = new StackLayout();
-            st.BackgroundColor = Color.FromRgb(50, 50, 50);
-            st.Children.Add(editor_btn);
+            editor_btn.Clicked += Start_Pages;
+            
+            timer_btn = new Button
+            {
+                Text = "Timeri leht",
+                TextColor = Color.Brown,
+                BackgroundColor = Color.Aqua
+            };
+            timer_btn.Clicked += Start_Pages;
+            box_btn = new Button
+            {
+                Text = "BoxView leht",
+                TextColor = Color.Brown,
+                BackgroundColor = Color.Aqua
+            };
+            box_btn.Clicked += Start_Pages;
+
+
+            StackLayout st = new StackLayout
+            {
+                Children = { editor_btn, timer_btn, box_btn, datepicker_btn,ss_btn }
+            };
+            st.BackgroundColor = Color.FromRgb(50, 50, 50);            
             Content = st;
 
         }
 
-        private async void Editor_btn_Clicked(object sender, EventArgs e)
+        private async void Start_Pages(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new Editor_Page());
+            Button btn = (Button)sender;
+            if (sender==editor_btn)
+            {
+                await Navigation.PushAsync(new Editor_Page());
+            }
+            else if (sender==box_btn)
+            {
+                await Navigation.PushAsync(new BoxView_Page());
+            }
+            else if (sender==timer_btn)
+            {
+                await Navigation.PushAsync(new Timer_Page());
+            }
+            else if (sender == datepicker_btn)
+            {
+                await Navigation.PushAsync(new Date_Page());
+            }
+            else if (sender == ss_btn)
+            {
+                await Navigation.PushAsync(new SS_Page());
+            }
+
         }
+
+        
     }
 }
