@@ -10,7 +10,7 @@ namespace Elemendid_kujundus
 {
     public partial class MainPage : ContentPage
     {
-        Button editor_btn, timer_btn, box_btn, datepicker_btn,ss_btn;
+        Button editor_btn, timer_btn, box_btn, datepicker_btn,ss_btn, frame_btn;
         public MainPage()
         {
             datepicker_btn = new Button
@@ -49,11 +49,16 @@ namespace Elemendid_kujundus
                 BackgroundColor = Color.Aqua
             };
             box_btn.Clicked += Start_Pages;
-
-
+            frame_btn = new Button
+            {
+                Text = "Frame/Grid leht",
+                TextColor = Color.Brown,
+                BackgroundColor = Color.Beige
+            };
+            frame_btn.Clicked += Start_Pages;
             StackLayout st = new StackLayout
             {
-                Children = { editor_btn, timer_btn, box_btn, datepicker_btn,ss_btn }
+                Children = { editor_btn, timer_btn, box_btn, datepicker_btn,ss_btn, frame }
             };
             st.BackgroundColor = Color.FromRgb(50, 50, 50);            
             Content = st;
@@ -82,6 +87,10 @@ namespace Elemendid_kujundus
             else if (sender == ss_btn)
             {
                 await Navigation.PushAsync(new SS_Page());
+            }
+            else if (sender == frame_btn)
+            {
+                await Navigation.PushAsync(new Frame_Page());
             }
 
         }

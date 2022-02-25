@@ -52,6 +52,7 @@ namespace Elemendid_kujundus
         private void Stp_ValueChanged(object sender, ValueChangedEventArgs e)
         {
             lbl.Text = String.Format("Slideri väärtus on {0:F1}", e.NewValue);
+
         }
 
         private void Sl_ValueChanged(object sender, ValueChangedEventArgs e)
