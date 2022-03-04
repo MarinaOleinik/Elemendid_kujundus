@@ -24,7 +24,7 @@ namespace Elemendid_kujundus
             sw = new Switch
             {
                 IsToggled=true,
-                VerticalOptions=LayoutOptions.EndAndExpand,
+                VerticalOptions=LayoutOptions.EndAndExpand,//kommi
                 HorizontalOptions=LayoutOptions.Center
             };
             sw.Toggled += Sw_Toggled;
