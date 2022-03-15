@@ -58,7 +58,7 @@ namespace Elemendid_kujundus
             frame_btn.Clicked += Start_Pages;
             StackLayout st = new StackLayout
             {
-                Children = { editor_btn, timer_btn, box_btn, datepicker_btn,ss_btn, frame }
+                Children = { editor_btn, timer_btn, box_btn, datepicker_btn,ss_btn, frame_btn }
             };
             st.BackgroundColor = Color.FromRgb(50, 50, 50);            
             Content = st;

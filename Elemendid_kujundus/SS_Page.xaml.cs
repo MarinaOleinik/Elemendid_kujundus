@@ -26,7 +26,7 @@ namespace Elemendid_kujundus
             sl = new Slider
             {
                 Minimum=0,
-                Maximum=100,
+                Maximum=255,
                 Value=30,
                 MinimumTrackColor=Color.Red,
                 MaximumTrackColor=Color.Yellow,
@@ -51,7 +51,7 @@ namespace Elemendid_kujundus
 
         private void Stp_ValueChanged(object sender, ValueChangedEventArgs e)
         {
-            lbl.Text = String.Format("Slideri väärtus on {0:F1}", e.NewValue);
+            lbl.Text = String.Format("Stepperi väärtus on {0:F1}", e.NewValue);
 
         }
 

@@ -24,7 +24,6 @@
                     Text="Tagasi"
                     FontSize="Large"
                     Clicked="tagasi_btn_Clicked">
-                
             </Button>
         </StackLayout>
     </ContentPage.Content>

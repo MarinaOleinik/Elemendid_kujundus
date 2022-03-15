@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:forms="clr-namespace:MediaManager.Forms;assembly=MediaManager.Forms"
+             x:Class="Elemendid_kujundus.Media_Page">
+    <ContentPage.Content>
+        <StackLayout>
+            <Button
+            x:Name="btn_start"
+            Clicked="btn_start_Clicked"
+            Text="Mängi" />
+            <Button
+            x:Name="btn_stop"
+            Clicked="btn_stop_Clicked"
+            Text="Lülita välja" />
+            <forms:VideoView HeightRequest="202" WidthRequest="202" BackgroundColor="Bisque" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

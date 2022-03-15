@@ -41,7 +41,7 @@ namespace Elemendid_kujundus
                 var dur = TimeSpan.FromSeconds(0.3);
                 Vibration.Vibrate(dur);
             }
-            catch (Exception exp)
+            catch (Exception)
             {   
             }
             box.Rotation += 10;

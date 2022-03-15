@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MediaManager;
+using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -9,8 +10,8 @@ namespace Elemendid_kujundus
         public App()
         {
             InitializeComponent();
-
-            MainPage = new NavigationPage( new MainPage());
+            
+            MainPage = new NavigationPage( new Media_Page());
         }
 
         protected override void OnStart()
