@@ -4,16 +4,55 @@
              xmlns:forms="clr-namespace:MediaManager.Forms;assembly=MediaManager.Forms"
              x:Class="Elemendid_kujundus.Media_Page">
     <ContentPage.Content>
-        <StackLayout>
-            <Button
-            x:Name="btn_start"
-            Clicked="btn_start_Clicked"
-            Text="Mängi" />
-            <Button
-            x:Name="btn_stop"
-            Clicked="btn_stop_Clicked"
-            Text="Lülita välja" />
-            <forms:VideoView HeightRequest="202" WidthRequest="202" BackgroundColor="Bisque" />
-        </StackLayout>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <ImageButton 
+                Grid.Row="0" Grid.Column="0" 
+                Source="play.png" 
+                BackgroundColor="Transparent" 
+                Clicked="btn_start_Clicked">
+            </ImageButton>
+            <ImageButton 
+                Grid.Row="0" Grid.Column="1" 
+                Source="paus.png" 
+                BackgroundColor="Transparent" 
+                Clicked="btn_paus_Clicked">
+            </ImageButton>
+            <ImageButton 
+                Grid.Row="0" Grid.Column="2" 
+                Source="stop.jpg" 
+                BackgroundColor="Transparent" 
+                Clicked="btn_stop_Clicked">
+            </ImageButton>
+            <Slider
+                x:Name="Volume"
+                Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3"
+                Minimum="0" Maximum="100"
+                Value="30"
+                MinimumTrackColor="DarkSlateBlue" MaximumTrackColor="LightSkyBlue"
+                ValueChanged="Volume_ValueChanged">
+            </Slider>
+            <ImageButton 
+                x:Name="video"
+                Grid.Row="2" Grid.Column="0" 
+                Source="red.png" 
+                BackgroundColor="Transparent" 
+                Clicked="Video_play_Clicked">
+            </ImageButton>
+            <forms:VideoView 
+                Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="3"
+                HeightRequest="200" WidthRequest="200"
+                BackgroundColor="Beige"/>
+        </Grid>
     </ContentPage.Content>
 </ContentPage>

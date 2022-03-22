@@ -10,8 +10,9 @@ namespace Elemendid_kujundus
         public App()
         {
             InitializeComponent();
-            
-            MainPage = new NavigationPage( new Media_Page());
+            //CrossMediaManager.Current.Init();
+            //VideoViewRenderer.Init();
+            MainPage = new NavigationPage( new List_Page());
         }
 
         protected override void OnStart()

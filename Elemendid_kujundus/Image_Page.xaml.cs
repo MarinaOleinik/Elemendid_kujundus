@@ -16,7 +16,7 @@ namespace Elemendid_kujundus
         Image img;
         public Image_Page()
         {
-            img = new Image { Source = "close_box_red.png" };
+            img = new Image { Source = "red.png" };
             TapGestureRecognizer tap2 = new TapGestureRecognizer();
             tap2.Tapped += Tap2_Tapped;
             tap2.NumberOfTapsRequired = 2;
@@ -41,7 +41,7 @@ namespace Elemendid_kujundus
             }
             else
             {
-                img.Source = "close_box_red.png";
+                img.Source = "red.png";
             }
         }
 

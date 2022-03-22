@@ -4,6 +4,7 @@ using Android.Content.PM;
 using Android.Runtime;
 using Android.OS;
 using MediaManager;//
+using MediaManager.Forms.Platforms.Android;//video
 
 namespace Elemendid_kujundus.Droid
 {
@@ -18,6 +19,7 @@ namespace Elemendid_kujundus.Droid
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
             //
             CrossMediaManager.Current.Init(this);
+            
             //
             LoadApplication(new App());
             
