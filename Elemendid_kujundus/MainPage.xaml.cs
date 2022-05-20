@@ -10,6 +10,7 @@ namespace Elemendid_kujundus
 {
     public partial class MainPage : ContentPage
     {
+        
         Button editor_btn, timer_btn, box_btn, datepicker_btn,ss_btn, frame_btn;
         public MainPage()
         {

@@ -1,4 +1,4 @@
-﻿using MediaManager;
+﻿//using MediaManager;
 using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -12,7 +12,7 @@ namespace Elemendid_kujundus
             InitializeComponent();
             //CrossMediaManager.Current.Init();
             //VideoViewRenderer.Init();
-            MainPage = new NavigationPage( new Media_Page());
+            MainPage = new NavigationPage( new PhotoPage());
         }
 
         protected override void OnStart()
